@@ -134,7 +134,8 @@ ActionMailer::Base.smtp_settings = {
   address: Barong::App.config.smtp_host,
   port: Barong::App.config.smtp_port,
   user_name: Barong::App.config.smtp_user,
-  password: Barong::App.config.smtp_password
+  password: Barong::App.config.smtp_password,
+  openssl_verify_mode: OpenSSL::SSL::VERIFY_NONE
 }
 
 Barong::GeoIP.lang = Barong::App.config.geoip_lang
